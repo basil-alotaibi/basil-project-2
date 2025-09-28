@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #111111;
+  --card-bg: #f9fafb;
+  --card-border: #e5e7eb;
+  --accent: #2563eb;
+  --success: #16a34a;
+}
+
+.dark {
+  --background: #0f172a;
+  --foreground: #f8fafc;
+  --card-bg: #1e293b;
+  --card-border: #334155;
+  --accent: #3b82f6;
+  --success: #22c55e;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+input {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  background-color: var(--card-bg);
+  color: var(--foreground);
+  transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid var(--accent);
+}
+
+button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--accent);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+.expense-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.expense-card:hover {
+  transform: scale(1.02);
+}
+
+.expense-name {
+  font-weight: 500;
+}
+
+.expense-amount {
+  font-weight: 700;
+  color: var(--success);
+}
+
+.total {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-top: 1rem;
+}
